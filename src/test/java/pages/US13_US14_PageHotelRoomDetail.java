@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class PageHotelRoomDetailsNilBay {
-    public PageHotelRoomDetailsNilBay(){
+public class US13_PageHotelRoomDetails {
+    public US13_PageHotelRoomDetails(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -46,7 +46,7 @@ public class PageHotelRoomDetailsNilBay {
     @FindBy(id = "Location")
     public WebElement locationTextBox;
 
-    @FindBy(className = "cke_source cke_reset cke_enable_context_menu cke_editable cke_editable_themed cke_contents_ltr")
+    @FindBy(xpath = "//textarea[@dir='ltr']")
     public WebElement descriptionTextArea;
 
     @FindBy(id = "Price")
@@ -64,11 +64,20 @@ public class PageHotelRoomDetailsNilBay {
     @FindBy(id = "MaxChildCount")
     public WebElement maxChildCountTextBox;
 
-    @FindBy (id = "IsAvailable")
+    @FindBy (xpath = "//input[@id='IsAvailable']")
     public WebElement avaibleCheckBox;
 
     @FindBy(xpath = "(//button[@class='btn green'])[1]")
     public WebElement saveButonu;
+
+    @FindBy(xpath = "(//div[@class='modal-content'])[2]")
+    public WebElement mesajPenceresi;
+
+    @FindBy(className = "btn btn-primary")
+    public WebElement okDuzenlemeButonu;
+
+    @FindBy(xpath = "//button[@data-bb-handler='confirm']")
+    public WebElement silmeOnayButonu;
 
     @FindBy(id = "btnDelete")
     public WebElement deleteButonu;
