@@ -3,10 +3,11 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import utilities.Driver;
 
-public class D_HotelListPage {
-    public D_HotelListPage(){
+public class US7_US8_DHotelListPage {
+    public US7_US8_DHotelListPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -29,10 +30,10 @@ public class D_HotelListPage {
     @FindBy(partialLinkText = "Hotel List")
     public WebElement hotelListButton;
 
-    @FindBy(partialLinkText = " Details")
+    @FindBy(xpath = "//a[@href='./HotelAdmin/Edit?Id=1016']")
     public WebElement detailsButton;
 
-    @FindBy(partialLinkText = "General Data")
+    @FindBy(linkText = "General Data")
     public WebElement generalData;
 
     @FindBy(id = "Code")
@@ -50,8 +51,15 @@ public class D_HotelListPage {
     @FindBy(id = "Email")
     public WebElement generelDataEmail;
 
-    @FindBy(id = "IDGroup")
+    @FindBy(xpath = "(//select[@class='form-control input-lg required'])[1]")
     public WebElement generelDataIDGroup;
+
+    public void IGroupSelect(){
+        Select select = new Select(generelDataIDGroup);
+        select.selectByVisibleText("Hotel Type2");
+    }
+
+
 
 
     @FindBy(xpath = "(//button[@class='btn green'])[1]")
@@ -61,6 +69,11 @@ public class D_HotelListPage {
     public WebElement deleteButton;
 
 
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public WebElement saveSuccessfully;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement alertOk;
 
 
 }
