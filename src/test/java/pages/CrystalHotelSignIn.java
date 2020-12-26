@@ -24,5 +24,18 @@ public class CrystalHotelSignIn {
     @FindBy(id = "btnSubmit")
     public WebElement girisButton;
 
+    @FindBy(xpath = "//label[@for='UserName']")
+    public WebElement userBosHataMesaj;
+
+    @FindBy(xpath = "//label[@for='Password']")
+    public WebElement passBosHataMesaj;
+
+    @FindBy(className = "validation-summary-errors")
+    public WebElement tryAgainMesaj;
+
+    @FindBy(id = "divMessageResult")
+    public WebElement tryAgainWrongPassMesaj;
+
+
 
 }
