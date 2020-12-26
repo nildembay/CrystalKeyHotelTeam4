@@ -1,4 +1,4 @@
-package tests;
+package tests.US_009positiveRoomCreation;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
