@@ -66,6 +66,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.mesajPenceresi.getText().contains(ConfigReader.getProperty("nb_SavedBasariliMesaji")));
         extentTest.pass("Room duzenleme islemi yapildi");
+
         Driver.closeDriver();
 
     }
