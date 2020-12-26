@@ -1,6 +1,7 @@
 package smokeTest;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CrystalHotelSignIn;
 import utilities.ConfigReader;
@@ -16,7 +17,7 @@ public class CrystalHotelSingInPositive {
         crystalHotelSignIn.userNameTextBox.sendKeys(ConfigReader.getProperty("valid_user"));
         crystalHotelSignIn.passwordTextBox.sendKeys(ConfigReader.getProperty("valid_password"));
         crystalHotelSignIn.girisButton.click();
-
+        Assert.assertTrue(crystalHotelSignIn.managerButton.isDisplayed());
 
     }
 

@@ -36,6 +36,8 @@ public class CrystalHotelSignIn {
     @FindBy(id = "divMessageResult")
     public WebElement tryAgainWrongPassMesaj;
 
+    @FindBy(xpath = "//a[@class='dropdown-toggle']")
+    public WebElement managerButton;
 
 
 }
