@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US13_PageHotelRoomDetails {
-    public US13_PageHotelRoomDetails(){
+public class US13_US14_PageHotelRoomDetail {
+    public US13_US14_PageHotelRoomDetail(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -91,7 +91,7 @@ public class US13_PageHotelRoomDetails {
     @FindBy(id = "tab_images_uploader_uploadfiles")
     public WebElement upLoadFilesButonu;
 
-    @FindBy(id = "Properties")
+    @FindBy(linkText = "Properties")
     public WebElement propertiesSekmesi;
 
     @FindBy(id = "lkpBarcodeTypes")
@@ -103,7 +103,7 @@ public class US13_PageHotelRoomDetails {
     @FindBy(id = "txtBarcode")
     public WebElement propertiesValueTextBox;
 
-    @FindBy(xpath = "//button[@class='btn green'])[2]")
+    @FindBy(xpath = "(//button[@class='btn green'])[2]")
     public WebElement propertiesSaveButonu;
 
     @FindBy(id = "product_barcodeCode_70")
@@ -112,10 +112,45 @@ public class US13_PageHotelRoomDetails {
     @FindBy(id = "product_barcode_70")
     public WebElement propertiesUpdateValueTextBox;
 
-    @FindBy(partialLinkText = "Remove")
+    @FindBy(xpath = "(//a[@class='btn default btn-sm  margin-bottom-5'])[1]")
     public WebElement propertiesRemoveButonu;
 
-    @FindBy(partialLinkText = "Update")
+    @FindBy(xpath = "(//a[@class='btn default btn-sm'])[1]")
     public WebElement propertiesUpdateButonu;
+
+    @FindBy (xpath = "//*[text()='Select Hotel']")
+    public WebElement selectHotelMesaji;
+
+    @FindBy(xpath = "(//*[text()='Code'])[2]")
+    public  WebElement codeMesaji;
+
+    @FindBy(xpath = "(//*[text()='Name'])[2]")
+    public WebElement nameMesaji;
+
+    @FindBy(xpath = "(//*[text()='Location'])[2]")
+    public WebElement locationMesaji;
+
+    @FindBy(xpath = "(//*[text()='Price'])[2]")
+    public WebElement priceMesaji;
+
+    @FindBy(xpath = "//*[text()='Select GroupRoomType']")
+    public WebElement selectGroupRoomTypeMesaji;
+
+    @FindBy(xpath = "//*[text()='Adult count']")
+    public WebElement adultCountMesaji;
+
+    @FindBy(xpath = "//*[text()='Children count']")
+    public WebElement childrenCountMesaji;
+
+    @FindBy(xpath = "//div[@id='datatable_barcodes_info']")
+    public WebElement kayitSayisi;
+
+    @FindBy(xpath = "//a[@href='/Admin/Account/Logoff']")
+    public WebElement logoutLinki;
+
+    @FindBy(xpath = "(//a[@class='dropdown-toggle'])[1]")
+    public WebElement managerLinki;
+
+
 
 }
