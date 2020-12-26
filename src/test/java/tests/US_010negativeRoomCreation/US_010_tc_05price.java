@@ -37,7 +37,7 @@ public class US_010_tc_05price {
         page.childCount.sendKeys(ConfigReader.getProperty("us_9child"));
         page.saveButonu.click();
         Thread.sleep(1000);
-        if (page.onayMesaji.isDisplayed()) System.out.println("invalid price'i kabul etti, kod hatali");
+        softAssert.assertTrue(page.hataMesaji.isDisplayed(),"price hata mesaji cikmiyor. Kod hatali.");
         Driver.closeDriver();
         softAssert.assertAll();
     }

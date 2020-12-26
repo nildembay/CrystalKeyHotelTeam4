@@ -37,7 +37,7 @@ public class US_010_tc_07adultCount {
         page.childCount.sendKeys(ConfigReader.getProperty("us_9child"));
         page.saveButonu.click();
         Thread.sleep(1000);
-        if (page.onayMesaji.isDisplayed()) System.out.println("invalid adult count'u kabul etti, kod hatali");
+        softAssert.assertTrue(page.hataMesaji.isDisplayed(),"adult count hata mesaji cikmiyor. Kod hatali.");
         Driver.closeDriver();
         softAssert.assertAll();
     }

@@ -37,7 +37,7 @@ public class US_010_tc_07childCount {
         page.childCount.sendKeys(ConfigReader.getProperty("us_10invalidChild"));
         page.saveButonu.click();
         Thread.sleep(1000);
-        if (page.onayMesaji.isDisplayed()) System.out.println("invalid children count'u kabul etti, kod hatali");
+        softAssert.assertTrue(page.hataMesaji.isDisplayed(),"children count hata mesaji cikmiyor. Kod hatali.");
         Driver.closeDriver();
         softAssert.assertAll();
     }
