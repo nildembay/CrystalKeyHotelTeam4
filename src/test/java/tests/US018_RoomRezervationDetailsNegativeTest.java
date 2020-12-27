@@ -170,7 +170,7 @@ public class US018_RoomRezervationDetailsNegativeTest {
         us018_roomRezervationDetailsPage.detailsNotes.clear();
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
-           boolean hataMesaji=("eski tarih secemezsiniz");
+         //    boolean hataMesaji=("eski tarih secemezsiniz");
         //Assert.assertTrue(hataMesaji.isDisplayed());
 }
 
