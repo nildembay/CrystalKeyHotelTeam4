@@ -324,15 +324,6 @@ public class US018_RoomRezervationDetailsNegativeTest {
         //bitti
     }
 
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
