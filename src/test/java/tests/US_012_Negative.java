@@ -3,24 +3,32 @@ package tests;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.US_011_012_HotelRoomSearchPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_012_Negative {
+public class US_012_Negative extends TestBaseRapor {
+
     US_011_012_HotelRoomSearchPage us_012_hotelRoomSearchNegativePage = new US_011_012_HotelRoomSearchPage();
-
+    @BeforeMethod
     public void login () {
+        extentTest = extentReports.createTest("ck hotel login sayfasi ");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
-
+        extentTest.info("ck hotels ana sayfaya git");
         us_012_hotelRoomSearchNegativePage.loginButonu.click();
         us_012_hotelRoomSearchNegativePage.userNameTextBox.sendKeys(ConfigReader.getProperty("valid_user"));
+        extentTest.info("valid kullanici adi girildi");
         us_012_hotelRoomSearchNegativePage.passwordTextBox.sendKeys(ConfigReader.getProperty("valid_password"));
+        extentTest.info("valid sifre girildi");
         us_012_hotelRoomSearchNegativePage.girisButtonu.click();
         us_012_hotelRoomSearchNegativePage.hotelManagementLinki.click();
         us_012_hotelRoomSearchNegativePage.hotelRoomsLinki.click();
+        extentTest.pass("hotel room page sayfasina basarili bir sekilde girildi");
+
 
     }
     @Test
@@ -30,6 +38,8 @@ public class US_012_Negative {
         us_012_hotelRoomSearchNegativePage.idTextBox.sendKeys(ConfigReader.getProperty("tc6_ID_textbox_invalid"));
         us_012_hotelRoomSearchNegativePage.searchButton.click();
         Assert.assertTrue(us_012_hotelRoomSearchNegativePage.bulunamadiYazisi.isDisplayed());
+        extentTest.pass("search islemi basarisiz oldu");
+        Driver.closeDriver();
 
     }
     @Test
@@ -39,6 +49,8 @@ public class US_012_Negative {
         us_012_hotelRoomSearchNegativePage.codeTextBox.sendKeys(ConfigReader.getProperty("tc7and10_code_textbox_invalid"));
         us_012_hotelRoomSearchNegativePage.searchButton.click();
         Assert.assertTrue(us_012_hotelRoomSearchNegativePage.aradiginDataYok.isDisplayed());
+        extentTest.pass("search islemi basarisiz oldu");
+        Driver.closeDriver();
     }
     @Test
     public void tc_008(){
@@ -47,6 +59,8 @@ public class US_012_Negative {
         us_012_hotelRoomSearchNegativePage.nameTextBox.sendKeys(ConfigReader.getProperty("tc8_name_textbox_invalid"));
         us_012_hotelRoomSearchNegativePage.searchButton.click();
         Assert.assertTrue(us_012_hotelRoomSearchNegativePage.bulunamadiYazisi.isDisplayed());
+        extentTest.pass("search islemi basarisiz oldu");
+        Driver.closeDriver();
     }
     @Test
     public void tc_009(){
@@ -55,6 +69,8 @@ public class US_012_Negative {
         us_012_hotelRoomSearchNegativePage.locationTextBox.sendKeys(ConfigReader.getProperty("tc9and10_location_textbox_invalid"));
         us_012_hotelRoomSearchNegativePage.searchButton.click();
         Assert.assertTrue(us_012_hotelRoomSearchNegativePage.bulunamadiYazisi.isDisplayed());
+        extentTest.pass("search islemi basarisiz oldu");
+        Driver.closeDriver();
     }
     @Test
     public void tc_010(){
@@ -68,6 +84,8 @@ public class US_012_Negative {
         select.selectByVisibleText("False");
         us_012_hotelRoomSearchNegativePage.searchButton.click();
         Assert.assertTrue(us_012_hotelRoomSearchNegativePage.bulunamadiYazisi.isDisplayed());
+        extentTest.pass("search islemi basarisiz oldu");
+        Driver.closeDriver();
 
 
 
