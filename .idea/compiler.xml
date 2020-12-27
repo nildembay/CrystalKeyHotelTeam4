@@ -10,5 +10,6 @@
         <module name="CrystalKeyHotelTeam4" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="same" />
   </component>
 </project>
