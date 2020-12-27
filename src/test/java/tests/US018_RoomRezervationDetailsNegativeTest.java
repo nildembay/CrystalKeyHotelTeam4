@@ -140,6 +140,7 @@ public class US018_RoomRezervationDetailsNegativeTest {
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
         Assert.assertTrue(us018_roomRezervationDetailsPage.detailsPriceHataMesaji.isDisplayed()); //"eski tarih secmemalisiniz" mesaji yok
+        System.out.println("Son calisma");
         //bitti
     }
 
