@@ -140,7 +140,7 @@ public class US018_RoomRezervationDetailsNegativeTest {
         us018_roomRezervationDetailsPage.detailsNotes.clear();
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
-     //   Assert.assertTrue(us018_roomRezervationDetailsPage..isDisplayed()); eski tarih secme mesaji yok
+        Assert.assertTrue(us018_roomRezervationDetailsPage.detailsPriceHataMesaji.isDisplayed()); //"eski tarih secmemalisiniz" mesaji yok
 
     }
 
@@ -170,7 +170,7 @@ public class US018_RoomRezervationDetailsNegativeTest {
         us018_roomRezervationDetailsPage.detailsNotes.clear();
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
-        //   boolean hataMesaji="eski tarih secemezsiniz";
+           boolean hataMesaji=("eski tarih secemezsiniz");
         //Assert.assertTrue(hataMesaji.isDisplayed());
 }
 
