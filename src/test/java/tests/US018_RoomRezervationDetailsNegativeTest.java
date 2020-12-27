@@ -201,16 +201,15 @@ public class US018_RoomRezervationDetailsNegativeTest {
         us018_roomRezervationDetailsPage.detailsNotes.clear();
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
-<<<<<<< HEAD
-           boolean hataMesaji=("eski tarih secemezsiniz");
+
+        //   boolean hataMesaji=("eski tarih secemezsiniz");
         //Assert.assertTrue(hataMesaji.isDisplayed());
 }
-=======
-        Assert.assertTrue(us018_roomRezervationDetailsPage.adultAmountHataMesaji.isDisplayed());
+       //  Assert.assertTrue(us018_roomRezervationDetailsPage.adultAmountHataMesaji.isDisplayed());
         //bitti
->>>>>>> refs/remotes/origin/master
 
-    }
+
+
     @Test
     public void negativeTestChildrenAmountBosBirakTC08() throws InterruptedException {
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
