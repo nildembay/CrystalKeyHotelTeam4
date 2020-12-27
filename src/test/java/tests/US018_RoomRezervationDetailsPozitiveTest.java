@@ -35,12 +35,11 @@ public class US018_RoomRezervationDetailsPozitiveTest {
         select2.selectByValue("2");
         us018_roomRezervationDetailsPage.detailsPrice.clear();
         us018_roomRezervationDetailsPage.detailsPrice.sendKeys(ConfigReader.getProperty("Tvalid_price"));
+       //buraya actions yazilacak
         us018_roomRezervationDetailsPage.detailsDateStart.click();
         us018_roomRezervationDetailsPage.detailsDateStartSelect.click();
         us018_roomRezervationDetailsPage.detailsDateEnd.click();
         Thread.sleep(3000);
-
-
         us018_roomRezervationDetailsPage.detailsDateEndSelect.click();
         us018_roomRezervationDetailsPage.detailsAdultAmount.sendKeys(ConfigReader.getProperty("TAdultAmount"));
         us018_roomRezervationDetailsPage.detailsChildrenAmount.sendKeys(ConfigReader.getProperty("TChildrenAmount"));

@@ -102,6 +102,29 @@ public class US018_RoomRezervationDetailsPage {
     @FindBy(xpath = "((//td[@class='old day'])[1]")
     public  WebElement detailsOldDateSelect;
 
+    @FindBy(xpath = "//label[@for='Price']")
+    public  WebElement priceHataMesaji;
+
+
+    @FindBy(xpath = "//label[@for='AdultAmount']")
+    public  WebElement adultAmountHataMesaji;
+
+    @FindBy(xpath = "//label[@for='ChildrenAmount']")
+    public  WebElement childrenAmountHataMesaji;
+
+    @FindBy(xpath = "//label[@for='ContactNameSurname']")
+    public  WebElement contactNameSurnameHataMesaji;
+
+    @FindBy(xpath = "//label[@for='ContactPhone']")
+    public  WebElement contactPhoneHataMesaji;
+
+    @FindBy(xpath = "//label[@for='ContactEmail']")
+    public  WebElement contactEmailHataMesaji;
+
+
+
+
+
 
 
 
