@@ -23,7 +23,7 @@ public abstract class TestBaseRapor {
         // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
         extentReports.setSystemInfo("Enviroment","QA");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
-        extentReports.setSystemInfo("Automation Engineer", "Mehmet");
+        extentReports.setSystemInfo("Automation Engineer", "Murat");
         extentHtmlReporter.config().setDocumentTitle("CRYSTALKEY HOTEL TESTİ");
         extentHtmlReporter.config().setReportName("CRYSTALKEY HOTEL Automation Reports");
     }

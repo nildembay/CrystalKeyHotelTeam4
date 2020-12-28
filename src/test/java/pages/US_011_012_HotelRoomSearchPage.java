@@ -28,7 +28,7 @@ public class US_011_012_HotelRoomSearchPage {
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRoomsLinki;
 
-    @FindBy(xpath="//select[@id='lkpHotels']")
+    @FindBy(id="lkpHotels")
     public WebElement hotelIDDropdown;
 
     @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
