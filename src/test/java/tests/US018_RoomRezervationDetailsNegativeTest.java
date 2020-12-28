@@ -10,8 +10,9 @@ import org.testng.annotations.Test;
 import pages.US018_RoomRezervationDetailsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US018_RoomRezervationDetailsNegativeTest {
+public class US018_RoomRezervationDetailsNegativeTest extends TestBaseRapor {
     @BeforeMethod
     public void SignIn() {
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
@@ -27,6 +28,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestDropDownSecimsizTC02() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
 
         Thread.sleep(3000);
@@ -54,6 +57,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
     }
     @Test
     public void negativeTestUserDropDownSecimsizTC03() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
         select1.selectByValue("24");
@@ -87,6 +92,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestPricetextBoxBosTC04() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
 
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
@@ -117,6 +124,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestDateStartGecmisGunTC05() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
         select1.selectByValue("24");
@@ -147,6 +156,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestDateEndGecmisGunTC06() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
         select1.selectByValue("24");
@@ -177,6 +188,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestAdultAmountBosBirakTC07() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
 
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
@@ -202,15 +215,18 @@ public class US018_RoomRezervationDetailsNegativeTest {
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
         Assert.assertTrue(us018_roomRezervationDetailsPage.adultAmountHataMesaji.isDisplayed());
+
         //bitti
 
     }
 
     @Test
     public void negativeTestChildrenAmountBosBirakTC08() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
-        select1.selectByValue("24");
+        select1.selectByValue("28");
         Thread.sleep(3000);
         Select select2 = new Select(us018_roomRezervationDetailsPage.detailsUserDropDown);
         select2.selectByValue("3");
@@ -230,8 +246,11 @@ public class US018_RoomRezervationDetailsNegativeTest {
         us018_roomRezervationDetailsPage.detailsContactEmail.sendKeys(ConfigReader.getProperty("TContactEmail"));
         us018_roomRezervationDetailsPage.detailsNotes.clear();
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
+        extentTest.info("Doğru bilgiler girildi");
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
         Assert.assertTrue(us018_roomRezervationDetailsPage.childrenAmountHataMesaji.isDisplayed());
+        extentTest.pass("Room Rezervation duzenleme islemi yapildi");
+
         //bitti
 
 
@@ -239,6 +258,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestContactNameSurnameBosBirakTC09() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
 
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
@@ -269,6 +290,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestContactPhoneBosBirakTC10() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
 
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
@@ -298,6 +321,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestContactEmailBosBirakTC11() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         Select select1 = new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
         select1.selectByValue("24");
@@ -328,6 +353,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestDeleteButtonTC12() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         us018_roomRezervationDetailsPage.detailsDeleteButton.click();
         Assert.assertTrue(us018_roomRezervationDetailsPage.contactEmailHataMesaji.isDisplayed()); // hata mesaji cikmadigi icin baska bir hata mesajini yazdim
@@ -337,6 +364,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void pozitiveTestPropertiesDeleteTC14() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
         us018_roomRezervationDetailsPage.propertiesButton.click();
         WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
@@ -365,6 +394,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
     }
     @Test
     public void pozitiveTestPropertiesUpdateTC15() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
         us018_roomRezervationDetailsPage.propertiesButton.click();
         WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
@@ -393,6 +424,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     @Test
     public void negativeTestPropertiesSaveTC16() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
         us018_roomRezervationDetailsPage.propertiesButton.click();
         WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
@@ -411,6 +444,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
     }
     @Test
     public void negativeTestPropertiesSaveTC17() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
         us018_roomRezervationDetailsPage.propertiesButton.click();
         WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
@@ -429,6 +464,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
     }
     @Test
     public void negativeTestPropertiesSaveTC18() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
         us018_roomRezervationDetailsPage.propertiesButton.click();
         WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
@@ -447,6 +484,8 @@ public class US018_RoomRezervationDetailsNegativeTest {
     }
     @Test
     public void pozitiveTestPropertiesDeleteTC19() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
         us018_roomRezervationDetailsPage.propertiesButton.click();
         Actions actions =new Actions(Driver.getDriver());

@@ -11,8 +11,9 @@ import pages.CrystalHotelSignIn;
 import pages.US018_RoomRezervationDetailsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US018_RoomRezervationDetailsPozitiveTest {
+public class US018_RoomRezervationDetailsPozitiveTest extends TestBaseRapor {
     @BeforeMethod
     public void SignIn(){
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
@@ -28,6 +29,8 @@ public class US018_RoomRezervationDetailsPozitiveTest {
 
     @Test
     public void pozitiveDetails() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
         Select select1=new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
         select1.selectByValue("24");
@@ -48,12 +51,17 @@ public class US018_RoomRezervationDetailsPozitiveTest {
         us018_roomRezervationDetailsPage.detailsContactEmail.sendKeys(ConfigReader.getProperty("TContactEmail"));
         us018_roomRezervationDetailsPage.detailsNotes.clear();
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
+        extentTest.info("Doğru bilgiler girildi");
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
+        extentTest.pass("Room Rezervation duzenleme islemi yapildi");
+
 
     }
 
     @Test
     public void pozitiveTestPropertiesSaveTC13() throws InterruptedException {
+        extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
+
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
         us018_roomRezervationDetailsPage.propertiesButton.click();
         WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;

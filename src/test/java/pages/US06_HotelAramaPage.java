@@ -55,3 +55,5 @@ public class US06_HotelAramaPage {
     public WebElement emailTextBox;
 
 }
+
+
