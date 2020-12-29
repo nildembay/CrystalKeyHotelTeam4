@@ -14,10 +14,11 @@ public class CrystalHotelSingInPositive {
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         CrystalHotelSignIn crystalHotelSignIn=new CrystalHotelSignIn();
         crystalHotelSignIn.loginButonu.click();
-        crystalHotelSignIn.userNameTextBox.sendKeys(ConfigReader.getProperty("valid_user"));
+        crystalHotelSignIn.userNameTextBox.sendKeys(ConfigReader.getProperty("val   id_user"));
         crystalHotelSignIn.passwordTextBox.sendKeys(ConfigReader.getProperty("valid_password"));
         crystalHotelSignIn.girisButton.click();
         Assert.assertTrue(crystalHotelSignIn.managerButton.isDisplayed());
+        Driver.closeDriver();
 
 
     }
