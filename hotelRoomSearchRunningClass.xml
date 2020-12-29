@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="hotel room search and clear" >
+    <test name="hotelroom search ">
+        <classes>
+            <class name="tests.US_011_Positive"></class>
+            <class name="tests.US_012_Negative"></class>
+        </classes>
+    </test>
+</suite>
