@@ -18,7 +18,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
 
     @Test
     public void hotelRoomDuzenleme1() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenlenebilmeli");
+       // extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenlenebilmeli");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -61,11 +61,11 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
         uS13PageHotelRoomDetails.maxChildCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxChild"));
 
         uS13PageHotelRoomDetails.avaibleCheckBox.click();
-        extentTest.info("Doğru bilgiler girildi");
+       // extentTest.info("Doğru bilgiler girildi");
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.mesajPenceresi.getText().contains(ConfigReader.getProperty("nb_SavedBasariliMesaji")));
-        extentTest.pass("Room duzenleme islemi yapildi");
+       // extentTest.pass("Room duzenleme islemi yapildi");
 
         Driver.closeDriver();
 
