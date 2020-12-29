@@ -391,6 +391,90 @@ public class US018_RoomRezervationDetailsNegativeTest {
 
     }
 
+
+    @Test
+    public void negativeTestPropertiesSaveTC16() throws InterruptedException {
+        US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
+        us018_roomRezervationDetailsPage.propertiesButton.click();
+        WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
+        Select select=new Select(tipDropdown);
+        select.selectByIndex(0);
+        us018_roomRezervationDetailsPage.propertiesCodeTextBox.sendKeys("12345");
+        us018_roomRezervationDetailsPage.propertiesValueTextBox.sendKeys("yeni degisiklikler yapildi");
+        Thread.sleep(3000);
+        Actions actions=new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(3000);
+        us018_roomRezervationDetailsPage.propertiesSaveButton.click();
+        Thread.sleep(3000);
+        Assert.assertTrue(us018_roomRezervationDetailsPage.propertiesUpdateHataMesaji.isDisplayed());
+
+    }
+    @Test
+    public void negativeTestPropertiesSaveTC17() throws InterruptedException {
+        US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
+        us018_roomRezervationDetailsPage.propertiesButton.click();
+        WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
+        Select select=new Select(tipDropdown);
+        select.selectByValue("23");
+        us018_roomRezervationDetailsPage.propertiesCodeTextBox.clear();
+        us018_roomRezervationDetailsPage.propertiesValueTextBox.sendKeys("yeni degisiklikler yapildi");
+        Thread.sleep(3000);
+        Actions actions=new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(3000);
+        us018_roomRezervationDetailsPage.propertiesSaveButton.click();
+        Thread.sleep(3000);
+        Assert.assertTrue(us018_roomRezervationDetailsPage.propertiesUpdateHataMesaji.isDisplayed());
+
+    }
+    @Test
+    public void negativeTestPropertiesSaveTC18() throws InterruptedException {
+        US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
+        us018_roomRezervationDetailsPage.propertiesButton.click();
+        WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
+        Select select=new Select(tipDropdown);
+        select.selectByValue("23");
+        us018_roomRezervationDetailsPage.propertiesCodeTextBox.sendKeys("12345");
+        us018_roomRezervationDetailsPage.propertiesValueTextBox.clear();
+        Thread.sleep(3000);
+        Actions actions=new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(3000);
+        us018_roomRezervationDetailsPage.propertiesSaveButton.click();
+        Thread.sleep(3000);
+        Assert.assertTrue(us018_roomRezervationDetailsPage.propertiesUpdateHataMesaji.isDisplayed());
+
+    }
+    @Test
+    public void pozitiveTestPropertiesDeleteTC19() throws InterruptedException {
+        US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage = new US018_RoomRezervationDetailsPage();
+        us018_roomRezervationDetailsPage.propertiesButton.click();
+        Actions actions =new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.END).perform();
+        Thread.sleep(2000);
+        us018_roomRezervationDetailsPage.propertiesDeleteButton.click();
+        Thread.sleep(3000);
+        Assert.assertTrue(us018_roomRezervationDetailsPage.propertiesUpdateHataMesaji.isDisplayed());
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
     @Test
     public void negativeTestPropertiesSaveTC16() throws InterruptedException {
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
