@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -30,11 +31,11 @@ public class US7_US8_DHotelListPage {
     @FindBy(partialLinkText = "Hotel List")
     public WebElement hotelListButton;
 
-    @FindBy(xpath = "//a[@href='./HotelAdmin/Edit?Id=1016']")
+    @FindBy(xpath = "//tr[3]//td[8]")
     public WebElement detailsButton;
-
-    @FindBy(linkText = "General Data")
+    @FindBy(xpath = "/*[@id='edit-form']/div/div[2]/div/ul/li[1]/a")
     public WebElement generalData;
+    //sayfayi acar misiniz:)
 
     @FindBy(id = "Code")
     public WebElement generelDataCode;
@@ -58,9 +59,6 @@ public class US7_US8_DHotelListPage {
         Select select = new Select(generelDataIDGroup);
         select.selectByVisibleText("Hotel Type2");
     }
-
-
-
 
     @FindBy(xpath = "(//button[@class='btn green'])[1]")
     public WebElement saveButton;
@@ -129,8 +127,21 @@ public class US7_US8_DHotelListPage {
     public WebElement propertyValueFalse;
 
 
+    @FindBy(xpath = "//*[@id='datatable_barcodes']/tbody/tr[1]/td[6]/a[1]")
+    public WebElement propertyRemoveButton;
+
+    @FindBy(xpath = "//*[@id='datatable_barcodes']/tbody/tr[1]/td[6]/a[2]")
+    public WebElement propertyUpdateButton;
+
+    @FindBy(xpath = "//*[@id='product_barcodeCode_129']")
+    public WebElement propertyUpdateCode;
+
+    @FindBy(xpath = "//*[@id='product_barcode_129']")
+    public WebElement propertyUpdateValue;
 
 
 
 
 }
+
+
