@@ -366,6 +366,7 @@ public class US018_RoomRezervationDetailsNegativeTest extends TestBaseRapor {
 
 
 
+
     @Test
     public void negativeTestPropertiesSaveTC16() throws InterruptedException {
         extentTest=extentReports.createTest("CRYSTALKEY  ROOM REVERZATION DETAILS", "rezervasyon duzenlenebilmeli");
@@ -448,6 +449,8 @@ public class US018_RoomRezervationDetailsNegativeTest extends TestBaseRapor {
 
 
 
+
+
+
+
 }
-
-
