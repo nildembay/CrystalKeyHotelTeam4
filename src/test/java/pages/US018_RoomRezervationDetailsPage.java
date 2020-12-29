@@ -84,7 +84,7 @@ public class US018_RoomRezervationDetailsPage {
     @FindBy(xpath = "(//select[@name='lkpBarcodeTypes']")
     public WebElement detailsTip;
 
-    @FindBy(xpath = "(//label[@for='IDHotelRoom']")
+    @FindBy(xpath = "//label[@for='IDHotelRoom']")
     public WebElement detailsHotelRoomHataMesaji;
 
     @FindBy(xpath = "//label[@for='IDUser']")
@@ -159,7 +159,7 @@ public class US018_RoomRezervationDetailsPage {
     @FindBy(xpath = "//div[@class='bootbox-body']")
     public  WebElement propertiesUpdateMessage;
 
-    @FindBy(xpath = "//textarea[@id='product_barcode_101']")
+    @FindBy(xpath = "//textarea[@id='product_barcode_103']")
     public  WebElement propertiesUpdateTextArea;
 
 
