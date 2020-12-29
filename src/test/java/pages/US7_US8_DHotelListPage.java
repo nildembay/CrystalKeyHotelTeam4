@@ -75,5 +75,62 @@ public class US7_US8_DHotelListPage {
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement alertOk;
 
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public WebElement continueAlert;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement alertDeleteOk;
+
+    @FindBy(linkText = "Properties")
+    public WebElement propertiesButton;
+
+
+
+    @FindBy(id = "lkpBarcodeTypes")
+    public WebElement addPropertyTipSelect;
+
+    public void propertyTip(){
+        Select select = new Select(addPropertyTipSelect);
+        select.selectByVisibleText("Hotel Property1");
+    }
+
+    public void propertyTipFree(){
+        Select select = new Select(addPropertyTipSelect);
+        select.selectByVisibleText("Select Type...");
+
+    }
+
+    public boolean propertyTipFreeBoolean(){
+        Select select = new Select(addPropertyTipSelect);
+        select.selectByVisibleText("Select Type...");
+        return true;
+    }
+
+    @FindBy(id = "txtBarcodeCode")
+    public WebElement propertyCode;
+
+    @FindBy (id = "txtBarcode")
+    public WebElement propertyValue;
+
+    @FindBy(xpath = "//button[@class='btn green']")
+    public WebElement propertySaveButton;
+
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public WebElement propertyAlertMessage;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement propertyAlertButton;
+
+    @FindBy(xpath = "//label(@class='error'")
+    public WebElement generalDataCodeFalse;
+
+
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public WebElement propertyValueFalse;
+
+
+
+
+
 
 }
