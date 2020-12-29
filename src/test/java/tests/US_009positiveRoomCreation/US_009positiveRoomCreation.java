@@ -8,8 +8,9 @@ import pages.US_009AddHotelRoom;
 import smokeTest.CrystalHotelSingInPositive;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_009positiveRoomCreation {
+public class US_009positiveRoomCreation extends TestBaseRapor {
     public void roomCreationPage(){
         CrystalHotelSingInPositive login = new CrystalHotelSingInPositive();
         US_009AddHotelRoom page = new US_009AddHotelRoom();
@@ -22,6 +23,7 @@ public class US_009positiveRoomCreation {
     public void test1() throws InterruptedException {
         US_009AddHotelRoom page = new US_009AddHotelRoom();
         roomCreationPage();
+        extentTest=extentReports.createTest("crystalkey hotel room creation", "oda eklenebilmeli");
         Select selectHotel=new Select(page.idHotel);
         selectHotel.selectByVisibleText(ConfigReader.getProperty("us_9hotel"));
         page.code.sendKeys(ConfigReader.getProperty("us_9code"));
@@ -33,8 +35,11 @@ public class US_009positiveRoomCreation {
         selectRoomType.selectByVisibleText(ConfigReader.getProperty("us_9roomType"));
         page.adultCount.sendKeys(ConfigReader.getProperty("us_9adult"));
         page.childCount.sendKeys(ConfigReader.getProperty("us_9child"));
+        extentTest.info("bilgiler girildi");
         page.saveButonu.click();
         Thread.sleep(1000);
         Assert.assertTrue(page.onayMesaji.isDisplayed());
+        extentTest.pass("oda eklendi");
+        Driver.closeDriver();
     }
 }
