@@ -44,19 +44,14 @@ public class US018_RoomRezervationDetailsPage {
     @FindBy(xpath = "//input[@id='Price']")
     public WebElement detailsPrice;
 
-    @FindBy(xpath = "//input[@id='DateStart']")
+    @FindBy(xpath = "(//input[@class='form-control input'])[1]")
     public WebElement detailsDateStart;
 
-    @FindBy(xpath = "((//td[@class='day'])[15]")
-   public  WebElement detailsDateStartSelect;
 
 
-
-    @FindBy(xpath = "//input[@id='DateEnd']")
+    @FindBy(xpath = "(//input[@class='form-control input'])[2]")
     public WebElement detailsDateEnd;
 
-    @FindBy(xpath = "((//td[@class='day'])[19]")
-    public  WebElement detailsDateEndSelect;
 
     @FindBy(xpath = "//select[@id='IDState']")
     public WebElement detailsState;
@@ -77,7 +72,7 @@ public class US018_RoomRezervationDetailsPage {
     public WebElement detailsContactEmail;
 
 
-    @FindBy(xpath = "//input[@class='Notes']")
+    @FindBy(xpath = "//input[@id='Notes']")
     public WebElement detailsNotes;
 
     @FindBy(xpath = "//button[@class='btn green']")
@@ -89,10 +84,10 @@ public class US018_RoomRezervationDetailsPage {
     @FindBy(xpath = "(//select[@name='lkpBarcodeTypes']")
     public WebElement detailsTip;
 
-    @FindBy(xpath = "(//label[@for='IDHotelRoom']")
+    @FindBy(xpath = "//label[@for='IDHotelRoom']")
     public WebElement detailsHotelRoomHataMesaji;
 
-    @FindBy(xpath = "(//label[@for='IDUser']")
+    @FindBy(xpath = "//label[@for='IDUser']")
     public WebElement detailsUserHataMesaji;
 
     @FindBy(xpath = "(//label[@for='IDPrice']")
@@ -101,6 +96,108 @@ public class US018_RoomRezervationDetailsPage {
 
     @FindBy(xpath = "((//td[@class='old day'])[1]")
     public  WebElement detailsOldDateSelect;
+
+    @FindBy(xpath = "//label[@for='Price']")
+    public  WebElement priceHataMesaji;
+
+
+    @FindBy(xpath = "//label[@for='AdultAmount']")
+    public  WebElement adultAmountHataMesaji;
+
+    @FindBy(xpath = "//label[@for='ChildrenAmount']")
+    public  WebElement childrenAmountHataMesaji;
+
+    @FindBy(xpath = "//label[@for='ContactNameSurname']")
+    public  WebElement contactNameSurnameHataMesaji;
+
+    @FindBy(xpath = "//label[@for='ContactPhone']")
+    public  WebElement contactPhoneHataMesaji;
+
+    @FindBy(xpath = "//label[@for='ContactEmail']")
+    public  WebElement contactEmailHataMesaji;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public  WebElement detailsDeleteButton;
+
+
+    @FindBy(xpath = "//a[@href='#tab_properties']")
+    public  WebElement propertiesButton;
+
+    @FindBy(xpath = "//select[@id='lkpBarcodeTypes']")
+    public  WebElement propertiesTipDropdown;
+
+    @FindBy(xpath = "//input[@id='txtBarcodeCode']")
+    public  WebElement propertiesCodeTextBox;
+
+    @FindBy(xpath = "//textarea[@id='txtBarcode']")
+    public  WebElement propertiesValueTextBox;
+
+    @FindBy(xpath = "(//*[text()='Save'])[2]")
+    public  WebElement propertiesSaveButton;
+
+
+    @FindBy(xpath = "//*[text()='Value added']")
+    public  WebElement propertiesAlertMesaji;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public  WebElement propertiesAlertMesajiAccept;
+
+    @FindBy(xpath = "(//i[@class='fa fa-times'])[2]")
+    public  WebElement propertiesRemoveButton;
+
+    @FindBy(xpath = "(//button[@type='button'])[9]")
+    public  WebElement propertiesRemoveButtonAccept;
+
+
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public  WebElement propertiesRemoveMessage;
+
+
+    @FindBy(xpath = "(//i[@class='fa fa-check'])[3]")
+    public  WebElement propertiesUpdateButton;
+
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public  WebElement propertiesUpdateMessage;
+
+    @FindBy(xpath = "//textarea[@id='product_barcode_103']")
+    public  WebElement propertiesUpdateTextArea;
+
+
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public  WebElement propertiesUpdateHataMesaji;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public  WebElement propertiesDeleteButton;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
