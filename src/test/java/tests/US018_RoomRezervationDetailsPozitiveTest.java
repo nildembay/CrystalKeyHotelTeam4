@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -29,19 +30,15 @@ public class US018_RoomRezervationDetailsPozitiveTest {
     public void pozitiveDetails() throws InterruptedException {
         US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
         Select select1=new Select(us018_roomRezervationDetailsPage.detailsHotelRoomDropDown);
-        select1.selectByValue("16");
+        select1.selectByValue("24");
         Thread.sleep(3000);
         Select select2=new Select(us018_roomRezervationDetailsPage.detailsUserDropDown);
-        select2.selectByValue("2");
+        select2.selectByValue("3");
         us018_roomRezervationDetailsPage.detailsPrice.clear();
         us018_roomRezervationDetailsPage.detailsPrice.sendKeys(ConfigReader.getProperty("Tvalid_price"));
-        us018_roomRezervationDetailsPage.detailsDateStart.click();
-        us018_roomRezervationDetailsPage.detailsDateStartSelect.click();
-        us018_roomRezervationDetailsPage.detailsDateEnd.click();
-        Thread.sleep(3000);
-
-
-        us018_roomRezervationDetailsPage.detailsDateEndSelect.click();
+       //buraya actions yazilacak
+        us018_roomRezervationDetailsPage.detailsDateStart.sendKeys("01/13/2021");
+        us018_roomRezervationDetailsPage.detailsDateEnd.sendKeys("01/30/2021");
         us018_roomRezervationDetailsPage.detailsAdultAmount.sendKeys(ConfigReader.getProperty("TAdultAmount"));
         us018_roomRezervationDetailsPage.detailsChildrenAmount.sendKeys(ConfigReader.getProperty("TChildrenAmount"));
         us018_roomRezervationDetailsPage.detailsContactNameSurname.sendKeys(ConfigReader.getProperty("TContactNameSurname"));
@@ -53,12 +50,28 @@ public class US018_RoomRezervationDetailsPozitiveTest {
         us018_roomRezervationDetailsPage.detailsNotes.sendKeys(ConfigReader.getProperty("Tnotes"));
         us018_roomRezervationDetailsPage.detailsSaveButton.click();
 
+    }
 
-
-
-
+    @Test
+    public void pozitiveTestPropertiesSaveTC13() throws InterruptedException {
+        US018_RoomRezervationDetailsPage us018_roomRezervationDetailsPage=new US018_RoomRezervationDetailsPage();
+        us018_roomRezervationDetailsPage.propertiesButton.click();
+        WebElement tipDropdown=us018_roomRezervationDetailsPage.propertiesTipDropdown;
+        Select select=new Select(tipDropdown);
+        select.selectByValue("23");
+        us018_roomRezervationDetailsPage.propertiesCodeTextBox.sendKeys("12345");
+        us018_roomRezervationDetailsPage.propertiesValueTextBox.sendKeys("yeni degisiklikler yapildi");
+        Thread.sleep(3000);
+        Actions actions=new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(3000);
+        us018_roomRezervationDetailsPage.propertiesSaveButton.click();
+        Assert.assertFalse(us018_roomRezervationDetailsPage.propertiesAlertMesaji.isDisplayed());
+        us018_roomRezervationDetailsPage.propertiesAlertMesajiAccept.click();
 
     }
+
+
 
 
 }
