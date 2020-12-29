@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.lang.ref.WeakReference;
 import java.security.cert.X509Certificate;
 
 public class US06_HotelAramaPage {
@@ -30,6 +31,9 @@ public class US06_HotelAramaPage {
     @FindBy(xpath = "(//i[@class='icon-calendar'])[2]")
     public WebElement hotelListButton;
 
+    @FindBy(xpath = "//select[@id='lkpGroups']")
+    public WebElement idGroupDropDown;
+
     @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
     public WebElement searchButton;
 
@@ -53,5 +57,22 @@ public class US06_HotelAramaPage {
 
     @FindBy(xpath = "(//input[@class='form-control form-filter input-sm'])[6]")
     public WebElement emailTextBox;
+
+    @FindBy(id = "datatable_ajax_info")
+    public WebElement searhResults;
+
+    @FindBy(xpath = "//*[text()='Found total 1 records']")
+    public WebElement tekHotelAramaSonucu;
+
+    @FindBy(className = "dataTables_info")
+    public WebElement bulunamadiYazisi;
+
+    @FindBy(linkText = "Log out")
+    public WebElement logOutButton;
+
+
+
+
+
 
 }
