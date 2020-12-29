@@ -102,6 +102,7 @@ public class US_011_Positive extends TestBaseRapor {
         us_011_hotelRoomSearchPositivePage.clearButton.click();
         Assert.assertEquals(us_011_hotelRoomSearchPositivePage.idTextBox.getText(),ConfigReader.getProperty("clear_dogrulama"));
         extentTest.pass("clear islemi basarili oldu");
+        extentTest.pass("clear islemi basarili oldu");
 
     }
 }
