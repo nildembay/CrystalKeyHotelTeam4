@@ -19,6 +19,7 @@ public class CrystalHotelSingInPositive {
         crystalHotelSignIn.girisButton.click();
         Assert.assertTrue(crystalHotelSignIn.managerButton.isDisplayed());
 
+
     }
 
 
