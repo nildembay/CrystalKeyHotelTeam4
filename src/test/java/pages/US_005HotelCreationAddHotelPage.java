@@ -59,6 +59,10 @@ public class US_005HotelCreationAddHotelPage {
     @FindBy(xpath = "//*[text()='OK']")
     public  WebElement ok;
 
+    @FindBy(xpath ="//*[text()='Create Hotel\n" +
+            "        ']")
+    public  WebElement CreateHotel;
+
 
 
 
