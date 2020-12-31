@@ -34,7 +34,7 @@ public class CrystalHotelSignInNegative extends TestBaseRapor {
         //  crystalHotelSignIn.userNameTextBox.sendKeys(ConfigReader.getProperty(""));
         crystalHotelSignIn.passwordTextBox.sendKeys(ConfigReader.getProperty("valid_password"));
         crystalHotelSignIn.girisButton.click();
-        extentTest.info("username butonu boş bırakılıp login'e tıklandı.")
+        extentTest.info("username butonu boş bırakılıp login'e tıklandı.");
         Assert.assertEquals(crystalHotelSignIn.userBosHataMesaj.getText(),"This field is required.");
         extentTest.pass("username butonu altına hata mesajı alındı ve sayafaya giriş sağlanamadı.");
         Driver.closeDriver();
