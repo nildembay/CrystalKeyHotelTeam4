@@ -1,6 +1,6 @@
 package utilities;
 
-import io.github.bonigarcia.wdm.managers.OperaDriverManager;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -39,11 +39,6 @@ public class Driver {
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     break;
-                case "opera":
-                    OperaDriverManager.operadriver().setup();
-                    driver=new OperaDriver();
-                    break;
-
             }
 
         }
