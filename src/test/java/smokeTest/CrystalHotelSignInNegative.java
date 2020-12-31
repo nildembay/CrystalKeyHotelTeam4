@@ -62,7 +62,7 @@ public class CrystalHotelSignInNegative {
         crystalHotelSignIn.girisButton.click();
         Assert.assertTrue(crystalHotelSignIn.tryAgainWrongPassMesaj.isDisplayed());
         Driver.closeDriver();
-    }
+    }   
     @Test
     public void test7() {
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));

@@ -20,6 +20,7 @@ public class CrystalHotelSingInPositive {
         Assert.assertTrue(crystalHotelSignIn.managerButton.isDisplayed());
         Driver.closeDriver();
 
+
     }
 
 
