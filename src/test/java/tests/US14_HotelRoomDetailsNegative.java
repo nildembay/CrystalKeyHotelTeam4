@@ -15,7 +15,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
 
     @Test
     public void hotelRoomDuzenlemeNegative1() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenleme negative1");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda düzenleme negative 1");
 
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
@@ -50,7 +50,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.priceTextBox.sendKeys(ConfigReader.getProperty("nb_Price"));
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
         uS13PageHotelRoomDetails.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxAdult"));
@@ -62,13 +62,13 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.selectHotelMesaji.isDisplayed());
-        extentTest.pass("Room duzenleme islemi yapilamadi");
+        extentTest.pass("oda duzenleme islemi yapilamadi");
         Driver.closeDriver();
 
     }
     @Test
     public void hotelRoomDuzenlemeNegative2() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenleme negative2");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda düzenleme negative 2");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -81,7 +81,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select=new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
 
@@ -102,7 +102,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.priceTextBox.sendKeys(ConfigReader.getProperty("nb_Price"));
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
         uS13PageHotelRoomDetails.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxAdult"));
@@ -114,13 +114,13 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.codeMesaji.isDisplayed());
-        extentTest.pass("Room duzenleme islemi yapilamadi");
+        extentTest.pass("oda duzenleme islemi yapilamadi");
         Driver.closeDriver();
 
     }
     @Test
     public void hotelRoomDuzenlemeNegative3() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenleme negative3");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda düzenleme negative 3");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -133,7 +133,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select=new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
         uS13PageHotelRoomDetails.codeTextBox.sendKeys(ConfigReader.getProperty("nb_generalCode"));
@@ -154,7 +154,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.priceTextBox.sendKeys(ConfigReader.getProperty("nb_Price"));
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
         uS13PageHotelRoomDetails.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxAdult"));
@@ -166,13 +166,13 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.nameMesaji.isDisplayed());
-        extentTest.pass("Room duzenleme islemi yapilamadi");
+        extentTest.pass("oda duzenleme islemi yapilamadi");
         Driver.closeDriver();
 
     }
     @Test
     public void hotelRoomDuzenlemeNegative4() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenleme negative4");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda düzenleme negative 4");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -185,7 +185,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select=new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
         uS13PageHotelRoomDetails.codeTextBox.sendKeys(ConfigReader.getProperty("nb_generalCode"));
@@ -207,7 +207,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.priceTextBox.sendKeys(ConfigReader.getProperty("nb_Price"));
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
         uS13PageHotelRoomDetails.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxAdult"));
@@ -219,13 +219,14 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.locationMesaji.isDisplayed());
-        extentTest.pass("Room duzenleme islemi yapilamadi");
+        extentTest.pass("oda duzenleme islemi yapilamadi");
         Driver.closeDriver();
 
     }
     @Test
     public void hotelRoomDuzenlemeNegative5() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenleme negative5");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda düzenleme negative 5");
+
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -238,7 +239,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select=new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
         uS13PageHotelRoomDetails.codeTextBox.sendKeys(ConfigReader.getProperty("nb_generalCode"));
@@ -261,7 +262,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
 
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
         uS13PageHotelRoomDetails.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxAdult"));
@@ -273,13 +274,13 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.priceMesaji.isDisplayed());
-        extentTest.pass("Room duzenleme islemi yapilamadi");
+        extentTest.pass("oda duzenleme islemi yapilamadi");
         Driver.closeDriver();
 
     }
     @Test
     public void hotelRoomDuzenlemeNegative6() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenleme negative6");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda düzenleme negative 6");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -292,7 +293,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select = new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
         uS13PageHotelRoomDetails.codeTextBox.sendKeys(ConfigReader.getProperty("nb_generalCode"));
@@ -328,13 +329,13 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.selectGroupRoomTypeMesaji.isDisplayed());
-        extentTest.pass("Room duzenleme islemi yapilamadi");
+        extentTest.pass("oda duzenleme islemi yapilamadi");
         Driver.closeDriver();
     }
 
     @Test
     public void hotelRoomDuzenlemeNegative7() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenleme negative7");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda düzenleme negative 7");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -347,7 +348,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select=new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
         uS13PageHotelRoomDetails.codeTextBox.sendKeys(ConfigReader.getProperty("nb_generalCode"));
@@ -370,7 +371,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.priceTextBox.sendKeys(ConfigReader.getProperty("nb_Price"));
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
 
@@ -382,13 +383,13 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.adultCountMesaji.isDisplayed());
-        extentTest.pass("Room duzenleme islemi yapilamadi");
+        extentTest.pass("oda duzenleme islemi yapilamadi");
         Driver.closeDriver();
 
     }
     @Test
     public void hotelRoomDuzenlemeNegative8() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenleme negative8");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda düzenleme negative 8");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -401,7 +402,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select=new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
         uS13PageHotelRoomDetails.codeTextBox.sendKeys(ConfigReader.getProperty("nb_generalCode"));
@@ -424,7 +425,7 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.priceTextBox.sendKeys(ConfigReader.getProperty("nb_Price"));
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
         uS13PageHotelRoomDetails.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxAdult"));
@@ -436,14 +437,14 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         uS13PageHotelRoomDetails.saveButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.childrenCountMesaji.isDisplayed());
-        extentTest.pass("Room duzenleme islemi yapilamadi");
+        extentTest.pass("oda duzenleme islemi yapilamadi");
         Driver.closeDriver();
 
     }
 
     @Test
     public void hotelRoomsPropertiesEklemeNegative1() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda properties ekleme negative1");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda properties ekleme negative 1");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -462,15 +463,15 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         int ilkKayitSayisi=Integer.parseInt(uS13PageHotelRoomDetails.kayitSayisi.getText().replaceAll("\\D", ""));
         uS13PageHotelRoomDetails.propertiesSaveButonu.click();
-
+        Thread.sleep(2000);
         int sonKayitSayisi=Integer.parseInt(uS13PageHotelRoomDetails.kayitSayisi.getText().replaceAll("\\D", ""));
         Assert.assertTrue(ilkKayitSayisi==sonKayitSayisi);
-
+        extentTest.pass("oda properties ekleme islemi yapilamadi");
         Driver.closeDriver();
     }
     @Test
     public void hotelRoomsPropertiesEklemeNegative2() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda properties ekleme negative2");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda properties ekleme negative 2");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -484,18 +485,18 @@ public class US14_HotelRoomDetailsNegative extends TestBaseRapor {
         Select select=new Select(uS13PageHotelRoomDetails.propertiesTipDropdown);
         select.selectByVisibleText(ConfigReader.getProperty("nb_tipValue"));
         uS13PageHotelRoomDetails.propertiesCodeTextBox.sendKeys(ConfigReader.getProperty("nb_propertiesCode"));
-        extentTest.pass("Room properties ekleme yapilamadi");
+
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(1000);
         //int ilkKayitSayisi=Integer.parseInt(uS13PageHotelRoomDetails.kayitSayisi.getText().replaceAll("\\D", ""));
         uS13PageHotelRoomDetails.propertiesSaveButonu.click();
 
         //int sonKayitSayisi=Integer.parseInt(uS13PageHotelRoomDetails.kayitSayisi.getText().replaceAll("\\D", ""));
-       // Assert.assertTrue(ilkKayitSayisi==sonKayitSayisi);
+        // Assert.assertTrue(ilkKayitSayisi==sonKayitSayisi);
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.mesajPenceresi.getText().contains(ConfigReader.getProperty("nb_propertiesEklemeNegativeMesaji")));
-        extentTest.pass("Room properties ekleme yapilamadi");
+        extentTest.pass("oda properties ekleme islemi yapilamadi");
         Driver.closeDriver();
     }
 

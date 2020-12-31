@@ -106,10 +106,10 @@ public class US13_US14_PageHotelRoomDetail {
     @FindBy(xpath = "(//button[@class='btn green'])[2]")
     public WebElement propertiesSaveButonu;
 
-    @FindBy(id = "product_barcodeCode_70")
+    @FindBy(xpath = "(//input[@type='text'])[10]")
     public WebElement propertiesUpdateCodeTextBox;
 
-    @FindBy(id = "product_barcode_70")
+    @FindBy(xpath = "(//textarea[@class='form-control'])[1]")
     public WebElement propertiesUpdateValueTextBox;
 
     @FindBy(xpath = "(//a[@class='btn default btn-sm  margin-bottom-5'])[1]")

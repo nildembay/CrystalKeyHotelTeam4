@@ -18,7 +18,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
 
     @Test
     public void hotelRoomDuzenleme1() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenlenebilmeli");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenlenebilmeli 1");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -31,7 +31,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select=new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
         uS13PageHotelRoomDetails.codeTextBox.sendKeys(ConfigReader.getProperty("nb_generalCode"));
@@ -52,7 +52,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
         uS13PageHotelRoomDetails.priceTextBox.sendKeys(ConfigReader.getProperty("nb_Price"));
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
         uS13PageHotelRoomDetails.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxAdult"));
@@ -66,13 +66,12 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
         Thread.sleep(2000);
         Assert.assertTrue(uS13PageHotelRoomDetails.mesajPenceresi.getText().contains(ConfigReader.getProperty("nb_SavedBasariliMesaji")));
         extentTest.pass("Room duzenleme islemi yapildi");
-
         Driver.closeDriver();
 
     }
     @Test
     public void hotelRoomDuzenleme2() throws InterruptedException {
-        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenlenebilmeli");
+        extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda duzenlenebilmeli 2");
         Driver.getDriver().get(ConfigReader.getProperty("p_url"));
         US13_US14_PageHotelRoomDetail uS13PageHotelRoomDetails =new US13_US14_PageHotelRoomDetail();
         uS13PageHotelRoomDetails.loginButonu.click();
@@ -86,7 +85,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
         uS13PageHotelRoomDetails.generalDataSekmesi.click();
 
         Select select=new Select(uS13PageHotelRoomDetails.hotelDropdown);
-        select.selectByVisibleText(ConfigReader.getProperty("nb_HotelName"));
+        select.selectByIndex(2);
 
         uS13PageHotelRoomDetails.codeTextBox.clear();
         uS13PageHotelRoomDetails.codeTextBox.sendKeys(ConfigReader.getProperty("nb_generalCode"));
@@ -108,7 +107,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
         //pageHotelRoomDetailsNilBay.priceTextBox.sendKeys(ConfigReader.getProperty("nb_Price"));
 
         Select select1=new Select(uS13PageHotelRoomDetails.roomTypeDropdown);
-        select1.selectByVisibleText(ConfigReader.getProperty("nb_roomType"));
+        select1.selectByIndex(2);
 
         uS13PageHotelRoomDetails.maxAdultCountTextBox.clear();
         uS13PageHotelRoomDetails.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("nb_maxAdult"));
@@ -146,7 +145,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
         Thread.sleep(1000);
         uS13PageHotelRoomDetails.deleteButonu.click();
         Thread.sleep(1000);
-       // System.out.println(uS13PageHotelRoomDetails.mesajPenceresi.getText());
+        // System.out.println(uS13PageHotelRoomDetails.mesajPenceresi.getText());
         Assert.assertTrue(uS13PageHotelRoomDetails.mesajPenceresi.getText().contains(ConfigReader.getProperty("nb_SilmeOnayMesaji")));
         uS13PageHotelRoomDetails.silmeOnayButonu.click();
         Thread.sleep(1000);
@@ -210,7 +209,7 @@ public class US13_HotelRoomDetails extends TestBaseRapor {
 
     }
 
-    @Test
+    @Test(dependsOnMethods = "hotelRoomsPropertiesEkleme")
     public void hotelRoomsPropertiesDelete() throws InterruptedException {
         extentTest=extentReports.createTest("CRYSTALKEY HOTEL ROOM DETAILS", "oda properties delete");
 

@@ -1,5 +1,4 @@
-package utilities;
-import org.apache.commons.io.FileUtils;
+package utilities;import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
