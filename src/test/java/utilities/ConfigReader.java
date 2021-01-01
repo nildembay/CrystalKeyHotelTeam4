@@ -1,12 +1,9 @@
 package utilities;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
 public class ConfigReader {
-
     static private Properties properties;
     static {
         String path="configuration.properties";
@@ -22,6 +19,4 @@ public class ConfigReader {
     public static String getProperty(String key){
         return properties.getProperty(key);
     }
-
-
 }
