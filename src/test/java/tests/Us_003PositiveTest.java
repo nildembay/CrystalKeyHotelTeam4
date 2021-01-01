@@ -1,9 +1,7 @@
 package tests;
 
-import com.aventstack.extentreports.ExtentTest;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,16 +9,15 @@ import pages.CrystalHotelSignIn;
 import pages.US_003CrytalHotelSignPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
-
-import java.util.Iterator;
-import java.util.Set;
 
 public class Us_003PositiveTest extends TestBaseRapor {
     @Test
     public void positiveTest() throws InterruptedException {
-        extentTest=extentReports.createTest("CyristalKeyHotel positive test","CyristalKeyHotel sayfasindaregistration sayfasina girip kayit olma ");
+
+        Faker faker=new Faker();
+
+        extentTest = extentReports.createTest("CyristalKeyHotel positive test", "CyristalKeyHotel sayfasindaregistration sayfasina girip kayit olma ");
 
         WebDriver driver = Driver.getDriver();
         driver.get(ConfigReader.getProperty("p_url"));
@@ -29,9 +26,9 @@ public class Us_003PositiveTest extends TestBaseRapor {
         US_003CrytalHotelSignPage us_003CrytalHotelSignPage = new US_003CrytalHotelSignPage();
         us_003CrytalHotelSignPage.loginButonu.click();
         us_003CrytalHotelSignPage.CreateNewAccount.click();
-        us_003CrytalHotelSignPage.UsernameButonu.sendKeys(ConfigReader.getProperty("Us_003_username"));
+        us_003CrytalHotelSignPage.UsernameButonu.sendKeys(faker.name().username());
         us_003CrytalHotelSignPage.PasswordButonu.sendKeys(ConfigReader.getProperty("Us_003_password"));
-        us_003CrytalHotelSignPage.EmailButonu.sendKeys(ConfigReader.getProperty("Us_003_email"));
+        us_003CrytalHotelSignPage.EmailButonu.sendKeys(faker.internet().emailAddress());
         us_003CrytalHotelSignPage.FullnameButonu.sendKeys(ConfigReader.getProperty("Us_003_Fullname"));
         us_003CrytalHotelSignPage.PhoneNumberButton.sendKeys(ConfigReader.getProperty("Us_003_phoneNumber"));
         us_003CrytalHotelSignPage.SsnButonu.sendKeys(ConfigReader.getProperty("Us_003_SocialSecurityNumber"));
@@ -48,15 +45,15 @@ public class Us_003PositiveTest extends TestBaseRapor {
         us_003CrytalHotelSignPage.BirthdateButtonu.sendKeys(ConfigReader.getProperty("Us_003_Birthrate"));
         us_003CrytalHotelSignPage.RegistrationSaveButtonu.click();
 
-        String successfulnessesText=us_003CrytalHotelSignPage.succesfullyText.getText();
+        String successfulnessesText = us_003CrytalHotelSignPage.succesfullyText.getText();
         Thread.sleep(3000);
-        us_003CrytalHotelSignPage.SonOkButonu.click();
+
         extentTest.info("Doğru bilgiler girildi");
 
-        Assert.assertEquals(successfulnessesText,"User Data was inserted successfully");
+        Assert.assertTrue(us_003CrytalHotelSignPage.succesfullyText.getText().contains("User Data was inserted successfully"));
+        us_003CrytalHotelSignPage.SonOkButonu.click();
         extentTest.pass("Room Rezervation duzenleme islemi yapildi");
-
-
+        //Driver.closeDriver();
 
 
     }
